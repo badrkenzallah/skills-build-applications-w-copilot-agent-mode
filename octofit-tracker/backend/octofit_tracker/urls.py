@@ -22,6 +22,7 @@ from rest_framework.decorators import api_view
 import os
 
 codespace_name = os.environ.get('CODESPACE_NAME')
+# Use HTTPS for Codespace, HTTP for localhost
 if codespace_name:
     base_url = f"https://{codespace_name}-8000.app.github.dev"
 else:
